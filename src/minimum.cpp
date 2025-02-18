@@ -13,11 +13,18 @@ int minimum(std::vector<int> elements) {
   return output;
 }
 
-int sum(std::vector<int> nums){
+int sum(std::vector<int> nums) {
   int sum{0};
-  for (int num : nums){
+  for (int num : nums) {
     sum += num;
   }
   return sum;
+}
 
+double avarage(std::vector<int> nums) {
+  int sum = 0;
+  for (int num : nums) {
+    sum += num;
+  }
+  return sum / nums.size();
 }
