@@ -11,6 +11,16 @@ TEST(Test_algorithms, Minimum) {
     EXPECT_EQ(res, test_case.second);
   }
 }
+TEST(Test_algorithms, Sum) {
+  std::vector<std::pair<std::vector<int>, int>> test_cases{
+      {{1, 2, 3}, 6},
+      {{0}, 0},
+    {{-10000, 10, 0, 0}, -9990}};
+  for (auto test_case : test_cases) {
+    int res = sum(test_case.first);
+    EXPECT_EQ(res, test_case.second);
+  }
+}
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
