@@ -1,4 +1,5 @@
 #include "minimum.h"
+#include <algorithm>
 #include <climits>
 #include <iostream>
 #include <vector>
@@ -27,4 +28,17 @@ double avarage(std::vector<int> nums) {
     sum += num;
   }
   return sum / nums.size();
+}
+
+double median(std::vector<int> nums) {
+  std::sort(nums.begin(), nums.end());
+  int len = nums.size();
+  if (len < 1) {
+    return 0;
+  }
+  if (nums.size() % 2 == 1) {
+    return nums[len / 2];
+  } else {
+    return (nums[len / 2] + nums[(len / 2) - 1]) / 2.0;
+  }
 }
