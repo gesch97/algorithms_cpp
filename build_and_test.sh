@@ -12,7 +12,7 @@ fi
 
 cd build
 cmake .. || { echo "CMake configuration failed"; cd.. ; exit 1; }
-make || { echo "Make failed"; cd..; exit 1; }
+make || { echo "Make failed"; cd ..; exit 1; }
 
 ./tests/MyTests
 
