@@ -4,6 +4,7 @@ enable_testing()
 # Add the test executable
 add_executable(MyTests
     test_minimum.cpp
+    test_search.cpp
 )
 
 # Link the test executable with the library
