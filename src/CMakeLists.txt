@@ -2,6 +2,7 @@
 add_library(Algorithms
     minimum.cpp
     search.cpp
+    sort.cpp
 )
 
 # Specify the include directories for the library
