@@ -57,3 +57,15 @@ static std::vector<int> merge(std::vector<int> a, std::vector<int> b) {
   }
   return output;
 }
+
+std::vector<int> insertion_sort(std::vector<int> nums) {
+  size_t j{0};
+  for (size_t i = 1; i < nums.size(); i++) {
+    j = i;
+    while (j >= 1 && nums.at(j) < nums.at(j - 1)) {
+      std::swap(nums.at(j), nums.at(j - 1));
+      j--;
+    }
+  }
+  return nums;
+}
