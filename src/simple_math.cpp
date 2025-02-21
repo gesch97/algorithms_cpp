@@ -1,4 +1,4 @@
-#include "minimum.h"
+#include "simple_math.h"
 #include <algorithm>
 #include <climits>
 #include <iostream>

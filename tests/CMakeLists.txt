@@ -1,5 +1,5 @@
 add_executable(MyTests
-    test_minimum.cpp
+    test_simple_math.cpp
     test_search.cpp
     test_sort.cpp
 )

@@ -1,5 +1,5 @@
 add_library(Algorithms
-    minimum.cpp
+    simple_math.cpp
     search.cpp
     sort.cpp
 )

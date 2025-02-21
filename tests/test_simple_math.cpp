@@ -1,4 +1,4 @@
-#include "minimum.h"
+#include "simple_math.h"
 #include <gtest/gtest.h>
 #include <utility>
 #include <vector>
