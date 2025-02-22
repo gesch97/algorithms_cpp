@@ -6,6 +6,9 @@
 #include <vector>
 
 static std::vector<int> merge(std::vector<int> a, std::vector<int> b);
+static void quick_sort_recursive(std::vector<int> &nums, size_t from,
+                                 size_t to);
+static size_t partition(std::vector<int> &nums, size_t from, size_t to);
 
 std::vector<int> bubble_sort(std::vector<int> nums) {
   int j{0};
@@ -68,4 +71,39 @@ std::vector<int> insertion_sort(std::vector<int> nums) {
     }
   }
   return nums;
+}
+
+std::vector<int> quick_sort(std::vector<int> nums) {
+  const size_t nums_size = nums.size();
+  if (nums_size <= 1) {
+    return nums;
+  }
+  quick_sort_recursive(nums, 0, nums_size - 1);
+  return nums;
+}
+
+static void quick_sort_recursive(std::vector<int> &nums, size_t from,
+                                 size_t to) {
+  if (from < to) {
+    size_t mid_id = partition(nums, from, to);
+    if (mid_id > 0) {
+      quick_sort_recursive(nums, from, mid_id - 1);
+    }
+    quick_sort_recursive(nums, mid_id + 1, to);
+  }
+}
+
+static size_t partition(std::vector<int> &nums, size_t from, size_t to) {
+  int i = from;
+  int pivot = nums.at(to);
+  for (size_t j = i; j < to; j++) {
+    auto j_val = nums.at(j);
+    auto i_val = nums.at(i);
+    if (nums.at(j) < pivot) {
+      std::swap(nums.at(i), nums.at(j));
+      i++;
+    }
+  }
+  std::swap(nums.at(i), nums.at(to));
+  return i;
 }
