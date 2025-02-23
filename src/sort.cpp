@@ -107,3 +107,17 @@ static size_t partition(std::vector<int> &nums, size_t from, size_t to) {
   std::swap(nums.at(i), nums.at(to));
   return i;
 }
+
+std::vector<int> selection_sort(std::vector<int> nums) {
+  size_t smallest_idx{0};
+  for (size_t i = 0; i < nums.size(); i++) {
+    smallest_idx = i;
+    for (size_t j = smallest_idx; j < nums.size(); j++) {
+      if (nums.at(j) < nums.at(smallest_idx)) {
+        smallest_idx = j;
+      }
+    }
+    std::swap(nums.at(i), nums.at(smallest_idx));
+  }
+  return nums;
+}
