@@ -2,6 +2,7 @@ add_library(Algorithms
     simple_math.cpp
     search.cpp
     sort.cpp
+    sets.cpp
 )
 
 add_executable(my_prog main.cpp)
